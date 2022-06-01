@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 15px solid rgb(35, 100, 35);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.fireball {
+  width: 220px;
+  position: absolute;
+  bottom: 0;
+  animation: fireball 1.3s infinite linear;
+}
+.giantFireball {
+  display: none;
+}
+
+
+.giantFireballAppear {
+  display: flex;
+  width: 650px;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  animation: giantFireball 1s infinite linear;
+}
+
+.itachi {
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  position: absolute;
+  width: 800px;
+  animation: clouds 10s infinite linear;
+}
+
+#health {
+  position: absolute;
+  background-color: red;
+}
+
+.restart {
+  z-index: 200;
+  position: absolute;
+  background: rgba(220, 57, 57, 0.61);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(220, 57, 57, 0.3);
+  /* display: none; */
+  width: 650px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.restart p {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.restart button {
+  cursor: pointer;
+  padding: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+@keyframes fireball {
+  from {
+    right: -150px;
+  } 
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes giantFireball {
+  from {
+    right: -650px;
+  } 
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0%{
+    bottom: 0;
+  }
+
+  40%{
+    bottom: 170px;
+  }
+
+  50%{
+    bottom: 170px;
+  }
+
+  60%{
+    bottom: 170px;
+  }
+
+  100%{
+    bottom: 0;
+  }
+}
+
+@keyframes clouds {
+  from {
+    right: -800px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
