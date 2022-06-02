@@ -25,6 +25,7 @@ const especial = () => {
   health.value = 100;
   setTimeout(() => {
     ITACHI.src = 'images/susanoo.gif';
+    ITACHI.style.bottom = '-20px';
     FIREBALL.style.animation = 'fireball 1.3s infinite linear';
     FIREBALL.style.left = '';
     CLOUDS.style.animation = 'clouds 10s infinite linear';
@@ -33,7 +34,6 @@ const especial = () => {
   setTimeout(() => {
     ITACHI.src = 'images/itachi.gif';
   }, 5000);
-
 }
 
 const giantFireball = setInterval(() => {
@@ -45,11 +45,16 @@ const giantFireball = setInterval(() => {
 
 const loop = setInterval(() => {
   const fireballPosition = FIREBALL.offsetLeft; 
+  const giantFireballPosition = GIANTFIREBALL.offsetLeft; 
   const itachiPosition = +window.getComputedStyle(ITACHI).bottom.replace('px', '');
 
   if (fireballPosition <= 43 && fireballPosition > 0  && itachiPosition < 40) {
     health.value -= 10;
   }
+  if (giantFireballPosition <= 43 && giantFireballPosition > 0) {
+    health.value = 0;
+  }
+
   if (health.value == 0) {
     FIREBALL.style.display = 'none';
     ITACHI.src = 'images/disappear.gif';
