@@ -44,7 +44,7 @@ const especial = () => {
   fireballPositionLeft = FIREBALL.style.left;
   fireballPositionLeft = GIANTFIREBALL.style.left;
   ITACHI.src = 'images/mangekyou.gif';
-  ITACHI.style.bottom = '-100px';
+  itachiBottom = -100;
   ITACHI.style.left = '-35px';
   CLOUDS.style.animation = 'none';
   CLOUDS.style.left = cloudsPosition + 'px';
@@ -52,7 +52,7 @@ const especial = () => {
   setTimeout(() => {
     mangekyou = false;
     ultado = true;
-    ITACHI.style.bottom = '-80px';
+    itachiBottom = -80;
     ITACHI.style.left = '-30px';
     ITACHI.src = 'images/susanoo.gif';
     CLOUDS.style.animation = 'clouds 10s infinite linear';
