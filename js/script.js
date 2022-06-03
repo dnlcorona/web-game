@@ -60,7 +60,7 @@ const especial = () => {
   }, 1400);
   setTimeout(() => {
     ultado = false;
-    ITACHI.style.bottom = 0;
+    itachiBottom = 0;
     ITACHI.style.left = '170px'
     ITACHI.src = 'images/itachi.gif';
   }, 5000);
