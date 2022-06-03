@@ -21,7 +21,7 @@
 
 ## 🔥 Preview
 
-<img src="img/preview.png" alt="Preview">
+<img src="preview.png" alt="Preview">
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
