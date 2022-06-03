@@ -5,19 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+  <script defer src="js/script.js" ></script>
   <title>Itachi Jump</title>
 </head>
 <body>
 
   <div class="restart">
-    <p>Você Perdeu!</p>
-    <a href="index.html">
-      <button>reiniciar</button>
-    </a>
+    <img src="images/tobirama.jpg" alt="">
+    <div>
+      <p>UCHIHA BOM É UCHIHA MORTO!</p>
+      <a href="index.html">
+        <button>reiniciar</button>
+      </a>
+    </div>
   </div>
   <div class="game-board">
-    <progress id="health" value="100" max="100"></progress>
+    <div id="barraDeVida">
+        <progress id="health" value="100" max="100"></progress>
+        <span id="healthValue">teste</span>
+    </div>
+    <div id="km">
+      <span><span id="metros"></span> Metros</span>
+    </div>
     <img src="images/nuvem.png" class="clouds">
     <img src="images/katon.gif" class="fireball">
     <img src="images/katon.gif" class="giantFireball">

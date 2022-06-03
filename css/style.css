@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,31 +12,26 @@
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#87CEEB, #E0F6FF);
+  background: linear-gradient(#87ceeb, #e0f6ff);
 }
 
 .fireball {
   width: 220px;
   position: absolute;
   bottom: 0;
-  animation: fireball 1.3s infinite linear;
+  left: 1500;
 }
 .giantFireball {
-  display: none;
-}
-
-
-.giantFireballAppear {
   display: flex;
   width: 650px;
-  margin-bottom: 30px;
   position: absolute;
+  left: 2000;
   bottom: 0;
-  animation: giantFireball 1s infinite linear;
 }
 
 .itachi {
   position: absolute;
+  left: 170px;
   bottom: 0;
 }
 
@@ -49,9 +45,42 @@
   animation: clouds 10s infinite linear;
 }
 
+#barraDeVida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#km{
+  align-items: center;
+  text-align: center;
+}
+#km :first-child{
+  font-size: 1.5em;
+  font-family: "Roboto Slab", serif;
+}
+
+progress::-webkit-progress-bar{
+  background-color: red !important;width: 100%;
+}
+
+
+progress::-moz-progress-bar{
+  background-color: red !important;
+}
+progress{color: green;}
+
+
+#healthValue {
+  font-size: 1.5em;
+  font-family: "Roboto Slab", serif;
+  margin-left: 5px;
+}
+
 #health {
-  position: absolute;
   background-color: red;
+  height: 1.5em;
 }
 
 .restart {
@@ -72,62 +101,71 @@
   display: none;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #ad1700;
+}
+
+.restart img {
+  max-width: 250px;
+  width: auto;
+  height: auto;
+  margin-right: 30px;
 }
 
 .restart p {
   font-size: 2rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: normal;
   margin-bottom: 30px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restart div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .restart button {
+  font-family: "Roboto Slab", serif;
+  border: 2px solid #bd1900;
+  background-color: #ffe8ff;
+  font-size: 1rem;
   cursor: pointer;
   padding: 8px;
   text-transform: uppercase;
   font-weight: 700;
   border-radius: 8px;
-  border: none;
   outline: none;
 }
-
-@keyframes fireball {
-  from {
-    right: -150px;
-  } 
-
-  to {
-    right: 100%;
-  }
-}
-
-@keyframes giantFireball {
-  from {
-    right: -650px;
-  } 
-
-  to {
-    right: 100%;
-  }
+.restart button:hover {
+  background-color: #ffffff;
 }
 
 @keyframes jump {
-  0%{
+  0% {
     bottom: 0;
   }
 
-  40%{
+  40% {
     bottom: 170px;
   }
 
-  50%{
+  50% {
     bottom: 170px;
   }
 
-  60%{
+  60% {
     bottom: 170px;
   }
 
-  100%{
+  100% {
     bottom: 0;
   }
 }
