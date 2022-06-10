@@ -20,6 +20,10 @@
 
 <img src="images/preview.png" alt="Preview">
 
+## 🚀 **Em constante evolução...**
+
+---
+
 
 Feito com ♥ by [Daniel Corona](https://www.linkedin.com/in/dnlcorona/) and [Thiago Melo](https://www.linkedin.com/in/ThMeloDev/)
 
